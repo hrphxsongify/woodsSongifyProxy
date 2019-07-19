@@ -23,7 +23,15 @@ app.use(express.static('../client/dist'));
 
 app.get('/art', async (req, res) => {
   res.sendFile(await path.join(__dirname, '../client/dist/bundle.js'));
+});
+
+app.get('/', (req, res) => {
+  res.redirect(`/album/${String(Math.floor(Math.random() * 100))}`);
 })
+
+app.get('/script', async (req, res) => {
+  res.sendFile(await path.join(__dirname, '../client/dist/bundle.js'));
+});
 
 app.get('/static', async (req, res) => {
   res.sendFile(await path.join(__dirname, '../client/dist/static.js'));

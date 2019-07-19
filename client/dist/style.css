@@ -1,6 +1,7 @@
 body {
   background: #181818;
   font-family: 'Roboto', sans-serif;
+  overflow-y: hidden;
 }
 
 body a {
@@ -136,7 +137,7 @@ body a:hover {
 }
 
 .content__middle {
-  width: 70%;
+  width: 85%;
 }
 
 .content__right {
@@ -172,6 +173,7 @@ body a:hover {
   background: #282828;
   color: #aaa;
   overflow-y: scroll;
+  height: 81vh;
 }
 
 .navigation__list {
@@ -760,7 +762,7 @@ body a:hover {
 
 .artist__content .overview__artist {
   padding-right: 15px;
-  width: 70%;
+  width: 100%;
 }
 
 .artist__content .overview__artist .latest-release {

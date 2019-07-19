@@ -1,15 +1,12 @@
 import React from "react";
 import $ from "jquery";
+import SideBar from "./sideBar.jsx";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentAlbumData: {
-        name: "",
-        year: 0,
-        tracks: []
-      }
+      allAlbumData: []
     };
   }
 
@@ -18,16 +15,16 @@ class App extends React.Component {
     const url = window[window.length - 1];
     $.ajax({
       type: "get",
-      url: `http://localhost:3002/api/albums/${url}`,
+      url: `http://localhost:3002/albums`,
       success: albumList => {
-        console.log(albumList);
+        this.setState({ allAlbumData: albumList });
       },
       dataType: "json"
     });
   }
 
   render() {
-    return <div />;
+    return <SideBar albums={this.state.allAlbumData} />;
   }
 }
 
