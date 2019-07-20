@@ -41,9 +41,9 @@ app.get('/style', async (req, res) => {
   res.sendFile(await path.join(__dirname, '../client/dist/style.css'));
 })
 
-app.get('/api/album/:albumArtId', async (req, res) => {
-  res.send(await Album.findOne({}).exec());
-});
+// app.get('/api/album/:albumArtId', async (req, res) => {
+//   res.send(await Album.findOne({}).exec());
+// });
 
 app.get('/album/:albumArtId', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/dist/index.html'))
