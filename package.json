@@ -30,7 +30,7 @@
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5"
+    "webpack-cli": "^3.3.12"
   },
   "version": "1.0.0",
   "main": "index.js",
